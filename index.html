@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- //meta -->
+
+    <!-- css -->
+    <!-- plug-in css -->
+    <link rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- //plug-in css -->
+
+    <!-- ui css -->
+    <link rel="stylesheet" href="./assets/scss/style.css" />
+    <!-- //ui css -->
+    <!-- //css -->
+
+    <title>UI table study</title>
+  </head>
+  <body>
+    <!-- 
+    class naming : 
+        - 공통적으로 쓰는 큰 틀 레이아웃 (layout)
+        - 공통으로 여러곳에 사용 시 (ui)
+        - 특정 페이지만 사용 시 (page)
+        - 특이 케이스 (main, sub)
+    -->
+
+    <div class="page-main-wrap">
+      <div class="masthead-wrap">
+        <div class="layout-inner">
+          <span class="nuri-txt"
+            >이 누리집은 대한민국 공식 전자정부 누리집입니다.</span
+          >
+        </div>
+      </div>
+
+      <!-- header -->
+      <header class="layout-header-wrap">
+        <div class="layout-inner flex1">
+          <div class="logo-container">
+            <a href="#" class="icons-logo bgi"></a>
+            <nav class="nav-container">
+              <button href="#" class="nav-search">통합검색</button>
+              <button href="#" class="nav-menu">전체메뉴</button>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+      <section class="page-main-wrap">
+        <div class="layout-inner">
+          <div class="main-contents-wrap">
+            <table>
+              <caption class="blind">
+                신고범위표 : 구분(분류, 감염병), 신고범위(환자, 의사환자,
+                병원체보유자 )로 구성
+              </caption>
+              <colgroup>
+                <col style="width: 20%" span="5" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="2" scope="col">구분</th>
+                  <th colspan="3" scope="col">신고범위</th>
+                </tr>
+                <tr>
+                  <th scope="col">분류</th>
+                  <th scope="col">감염병</th>
+                  <th scope="col">환자</th>
+                  <th scope="col">의사환자</th>
+                  <th scope="col">병원체보유자</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="7">제2급감염병</td>
+                  <td>콜레라</td>
+                  <td>○</td>
+                  <td>○</td>
+                  <td>○</td>
+                </tr>
+                <tr>
+                  <td>장티푸스</td>
+                  <td>○</td>
+                  <td>○</td>
+                  <td>○</td>
+                </tr>
+                <tr>
+                  <td>파라티푸스</td>
+                  <td>○</td>
+                  <td>○</td>
+                  <td>○</td>
+                </tr>
+                <tr>
+                  <td>세균성이질</td>
+                  <td>○</td>
+                  <td>○</td>
+                  <td>○</td>
+                </tr>
+                <tr>
+                  <td>장출혈성대장균감염증</td>
+                  <td>○</td>
+                  <td>○</td>
+                  <td>○</td>
+                </tr>
+                <tr>
+                  <td>A형간염</td>
+                  <td>○</td>
+                  <td>○</td>
+                  <td>○</td>
+                </tr>
+                <tr>
+                  <td>E형간염</td>
+                  <td>○</td>
+                  <td>X</td>
+                  <td>○</td>
+                </tr>
+                <tr>
+                  <td>제3급감염병</td>
+                  <td>콜레라</td>
+                  <td>○</td>
+                  <td>○</td>
+                  <td>X</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption class="blind">
+                연도별 제2급 및 제3급 수인성‧식품매개감염병 발생 현황표-
+                감염병,2019년,2020년,2021년,2022년,2023년으로 구성
+              </caption>
+              <colgroup>
+                <col style="width: 8%" />
+                <col style="width: 18%" />
+                <col span="5" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">감염병</th>
+                  <th scope="col">2019년</th>
+                  <th scope="col">2020년</th>
+                  <th scope="col">2021년</th>
+                  <th scope="col">2022년</th>
+                  <th scope="col">2023년**</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="7">제2급</td>
+                  <td>콜레라</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>장티푸스</td>
+                  <td>94</td>
+                  <td>39</td>
+                  <td>61</td>
+                  <td>38</td>
+                  <td>19</td>
+                </tr>
+                <tr>
+                  <td>파라티푸스</td>
+                  <td>55</td>
+                  <td>58</td>
+                  <td>29</td>
+                  <td>31</td>
+                  <td>23</td>
+                </tr>
+                <tr>
+                  <td>세균성이질</td>
+                  <td>151</td>
+                  <td>29</td>
+                  <td>18</td>
+                  <td>31</td>
+                  <td>37</td>
+                </tr>
+                <tr>
+                  <td>장출혈성대장균감염증</td>
+                  <td>146</td>
+                  <td>270</td>
+                  <td>165</td>
+                  <td>211</td>
+                  <td>216</td>
+                </tr>
+                <tr>
+                  <td>A형간염</td>
+                  <td>17,598</td>
+                  <td>3,989</td>
+                  <td>6,583</td>
+                  <td>1,890</td>
+                  <td>1,322</td>
+                </tr>
+                <tr>
+                  <td>E형간염*</td>
+                  <td>-</td>
+                  <td>191</td>
+                  <td>494</td>
+                  <td>528</td>
+                  <td>571</td>
+                </tr>
+                <tr>
+                  <td>제3급</td>
+                  <td>비브리오패혈증</td>
+                  <td>42</td>
+                  <td>72</td>
+                  <td>52</td>
+                  <td>46</td>
+                  <td>69</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption class="blind">
+                연도별 제4급 수인성‧식품매개감염병 발생 현황(표본감시)표 -
+                종류,2020년,2021년,2022년로 구성
+              </caption>
+              <colgroup>
+                <col style="width: 10%" span="2" />
+                <col style="width: 38%" />
+                <col span="3" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="3" scope="col">종류</th>
+                  <th scope="col">2021년</th>
+                  <th scope="col">2022년</th>
+                  <th scope="col">2023년*</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="20">제4급</td>
+                  <td rowspan="11">세균<br />(11종)</td>
+                  <td>살모넬라균 감염증</td>
+                  <td>2,999</td>
+                  <td>3,082</td>
+                  <td>3,540</td>
+                </tr>
+                <tr>
+                  <td>장염비브리오균 감염증</td>
+                  <td>61</td>
+                  <td>50</td>
+                  <td>101</td>
+                </tr>
+                <tr>
+                  <td>장독소성대장균 감염증</td>
+                  <td>82</td>
+                  <td>136</td>
+                  <td>481</td>
+                </tr>
+                <tr>
+                  <td>장침습성대장균 감염증</td>
+                  <td>10</td>
+                  <td>12</td>
+                  <td>55</td>
+                </tr>
+                <tr>
+                  <td>장병원성대장균 감염증</td>
+                  <td>360</td>
+                  <td>920</td>
+                  <td>1,963</td>
+                </tr>
+                <tr>
+                  <td>캄필로박터균 감염증</td>
+                  <td>3,368</td>
+                  <td>3,173</td>
+                  <td>3,167</td>
+                </tr>
+                <tr>
+                  <td>클로스트리듐 퍼프린젠스 감염증</td>
+                  <td>3,151</td>
+                  <td>1,890</td>
+                  <td>423</td>
+                </tr>
+                <tr>
+                  <td>황색포도알균 감염증</td>
+                  <td>136</td>
+                  <td>136</td>
+                  <td>160</td>
+                </tr>
+                <tr>
+                  <td>바실루스 세레우스균 감염증</td>
+                  <td>7</td>
+                  <td>12</td>
+                  <td>42</td>
+                </tr>
+                <tr>
+                  <td>예르시니아 엔테로콜리타카 감염증</td>
+                  <td>148</td>
+                  <td>141</td>
+                  <td>169</td>
+                </tr>
+                <tr>
+                  <td>리스테리아 모노사이토제네스 감염증</td>
+                  <td>7</td>
+                  <td>11</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td rowspan="5">
+                    바이러스 <br />
+                    (5종)
+                  </td>
+                  <td>그룹 A형 로타바이러스 감염증</td>
+                  <td>1,053</td>
+                  <td>1,226</td>
+                  <td>1,352</td>
+                </tr>
+                <tr>
+                  <td>아스트로바이러스 감염증</td>
+                  <td>381</td>
+                  <td>1,015</td>
+                  <td>1,589</td>
+                </tr>
+                <tr>
+                  <td>장내 아데노바이러스 감염증</td>
+                  <td>400</td>
+                  <td>2,562</td>
+                  <td>621</td>
+                </tr>
+                <tr>
+                  <td>노로바이러스 감염증</td>
+                  <td>4,082</td>
+                  <td>4,673</td>
+                  <td>5,926</td>
+                </tr>
+                <tr>
+                  <td>사포바이러스 감염증</td>
+                  <td>67</td>
+                  <td>764</td>
+                  <td>955</td>
+                </tr>
+                <tr>
+                  <td rowspan="4">
+                    원충 <br />
+                    (4종)
+                  </td>
+                  <td>이질아메바 감염증</td>
+                  <td>16</td>
+                  <td>5</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <td>람블편모충 감염증</td>
+                  <td>53</td>
+                  <td>59</td>
+                  <td>44</td>
+                </tr>
+                <tr>
+                  <td>작은와포자충 감염증</td>
+                  <td>4</td>
+                  <td>9</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>원포자충 감염증</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td colspan="3">장관감염증 표본감시 지정기관 수</td>
+                  <td>208</td>
+                  <td>208</td>
+                  <td>206</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption class="blind">
+                연도별 제4급 수인성‧식품매개감염병 발생
+                현황(표본감시)표-구분,2019년,2020년,2021년,2022년,2023년* 로
+                구성
+              </caption>
+              <colgroup>
+                <col style="width: 25%" />
+                <col span="5" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">2019년</th>
+                  <th scope="col">2020년</th>
+                  <th scope="col">2021년</th>
+                  <th scope="col">2022년</th>
+                  <th scope="col">2023년*</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>발생 건수(건)</td>
+                  <td>603</td>
+                  <td>234</td>
+                  <td>470</td>
+                  <td>490</td>
+                  <td>603</td>
+                </tr>
+                <tr>
+                  <td>사례(명)</td>
+                  <td>7,659</td>
+                  <td>3,323</td>
+                  <td>7,900</td>
+                  <td>7,420</td>
+                  <td>12,195</td>
+                </tr>
+                <tr>
+                  <td>건당 사례수(발생 건/명)</td>
+                  <td>12.7</td>
+                  <td>14.2</td>
+                  <td>16.8</td>
+                  <td>15.1</td>
+                  <td>20.2</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption class="blind">
+                월별 수인성·식품매개감염병 집단발생 현황표로 2022, 2023년도별
+                구분, 1월, 2월, 3월, 4월, 5월, 6월, 7월, 8월, 9월,10월, 11월,
+                12월, 합계로 구성
+              </caption>
+              <colgroup>
+                <col style="width: 43px" />
+                <col style="width: 74px" />
+                <col span="13" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">구분분</th>
+                  <th scope="col">1월</th>
+                  <th scope="col">2월</th>
+                  <th scope="col">3월</th>
+                  <th scope="col">4월</th>
+                  <th scope="col">5월</th>
+                  <th scope="col">6월</th>
+                  <th scope="col">7월</th>
+                  <th scope="col">8월</th>
+                  <th scope="col">9월</th>
+                  <th scope="col">10월</th>
+                  <th scope="col">11월</th>
+                  <th scope="col">12월</th>
+                  <th scope="col">합계</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" rowspan="3">2022</th>
+                  <td>발생(건)</td>
+                  <td>27</td>
+                  <td>14</td>
+                  <td>11</td>
+                  <td>29</td>
+                  <td>59</td>
+                  <td>70</td>
+                  <td>86</td>
+                  <td>45</td>
+                  <td>38</td>
+                  <td>26</td>
+                  <td>38</td>
+                  <td>48</td>
+                  <td>490</td>
+                </tr>
+                <tr>
+                  <td>사례(명)</td>
+                  <td>276</td>
+                  <td>172</td>
+                  <td>377</td>
+                  <td>337</td>
+                  <td>1,001</td>
+                  <td>1,407</td>
+                  <td>1,031</td>
+                  <td>512</td>
+                  <td>749</td>
+                  <td>465</td>
+                  <td>463</td>
+                  <td>630</td>
+                  <td>7,420</td>
+                </tr>
+                <tr>
+                  <td>건당사례수(명/건)</td>
+                  <td>10.2</td>
+                  <td>12.3</td>
+                  <td>34.3</td>
+                  <td>11.6</td>
+                  <td>17.3</td>
+                  <td>20.1</td>
+                  <td>12.0</td>
+                  <td>11.4</td>
+                  <td>19.7</td>
+                  <td>17.9</td>
+                  <td>12.2</td>
+                  <td>13.1</td>
+                  <td>15.1</td>
+                </tr>
+                <tr>
+                  <th
+                    scope="row"
+                    rowspan="3"
+                    style="border-bottom: 1px solid #e8e8e8"
+                  >
+                    2023*
+                  </th>
+                  <td>발생(건)</td>
+                  <td>52</td>
+                  <td>56</td>
+                  <td>49</td>
+                  <td>59</td>
+                  <td>46</td>
+                  <td>47</td>
+                  <td>51</td>
+                  <td>54</td>
+                  <td>49</td>
+                  <td>49</td>
+                  <td>36</td>
+                  <td>55</td>
+                  <td>603</td>
+                </tr>
+                <tr>
+                  <td>사례(명)</td>
+                  <td>576</td>
+                  <td>607</td>
+                  <td>767</td>
+                  <td>1,276</td>
+                  <td>1,041</td>
+                  <td>499</td>
+                  <td>1,618</td>
+                  <td>1,001</td>
+                  <td>2,082</td>
+                  <td>1,114</td>
+                  <td>727</td>
+                  <td>887</td>
+                  <td>112,195</td>
+                </tr>
+                <tr>
+                  <td>건당사례수(명/건)</td>
+                  <td>11.1</td>
+                  <td>10.8</td>
+                  <td>15.7</td>
+                  <td>21.6</td>
+                  <td>22.6</td>
+                  <td>10.6</td>
+                  <td>31.7</td>
+                  <td>18.5</td>
+                  <td>42.5</td>
+                  <td>22.7</td>
+                  <td>20.2</td>
+                  <td>16.1</td>
+                  <td>20.2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- footer -->
+      <footer>
+        <!-- related site -->
+        <section class="layout-related-site">
+          <div class="total-wrap">
+            <div class="footer-layout-inner">
+              <button class="site-container">질병관리청 소속기관</button>
+              <button class="site-container">사업별 누리집</button>
+              <button class="site-container">관련국외기관</button>
+            </div>
+          </div>
+        </section>
+        <!-- //related site -->
+
+        <!-- footer content -->
+        <section class="layout-footer-content">
+          <div class="total-wrap">
+            <div class="content-inner">
+              <figure class="icons-logo bgi"></figure>
+              <div class="content-wrap">
+                <div class="address-wrap">
+                  <p class="address-container">
+                    (28159) 충북 청주시 흥덕구 오송읍 오송생명2로 187
+                    오송보건의료행정타운내
+                  </p>
+                  <ul class="tel-wrap">
+                    <li class="tel-container">
+                      <p class="tel-subject">대표전화</p>
+                      <div class="tel-desc bold">
+                        <p>1339</p>
+                        <!-- <div class="divider"></div> -->
+                        <p>(무료)</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="link-wrap">
+                  <div class="location-wrap">
+                    <button class="ui-btn-arrow-r">찾아오시는 길</button>
+                    <button class="ui-btn-arrow-r">이용안내</button>
+                  </div>
+                  <div class="sns-wrap">
+                    <a href="" class="sns-container">
+                      <span class="sr-only">인스타그램</span>
+                      <i class="icons-instagram"></i>
+                    </a>
+                    <a href="" class="sns-container">
+                      <span class="sr-only">유튜브</span>
+                      <i class="icons-youtube"></i>
+                    </a>
+                    <a href="" class="sns-container">
+                      <span class="sr-only">트위터</span>
+                      <i class="icons-twitter"></i>
+                    </a>
+                    <a href="" class="sns-container">
+                      <span class="sr-only">페이스북</span>
+                      <i class="icons-facebook"></i>
+                    </a>
+                    <a href="" class="sns-container">
+                      <span class="sr-only">블로그</span>
+                      <i class="icons-blog"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="layout-footer-copyright">
+                <div class="link-copy">
+                  <a href="" class="bold">개인정보처리방침</a>
+                  <a href="">저작권정책</a>
+                  <a href="">웹 접근성 품질인증 마크 획득</a>
+                </div>
+                <p class="copyright-all">
+                  COPYRIGHT KDCA. ALL RIGHTS RESERVED.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //footer content -->
+      </footer>
+      <!-- //footer -->
+    </div>
+
+    <!-- js -->
+    <!-- plug-in js -->
+
+    <!-- //plug-in js -->
+    <!-- //js -->
+  </body>
+</html>

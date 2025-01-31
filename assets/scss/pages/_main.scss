@@ -1,0 +1,68 @@
+.page-main-wrap {
+  @include flexColumn;
+  flex: 1;
+  margin-bottom: 50px;
+
+  // common
+  .main-gap {
+    @include flexColumn;
+    gap: 40px;
+    padding: 40px 0;
+
+    @include tablet {
+      gap: 64px;
+      padding: 64px 0;
+    }
+
+    & > section {
+      @include flexColumn {
+        gap: 24px;
+      }
+    }
+  }
+
+  .main-title-wrap {
+    padding: 12px 0;
+    border-bottom: 1px solid #b3c2a3;
+
+    .main-title {
+      @include font(h3, 40px);
+      letter-spacing: -0.08em;
+      color: #333;
+    }
+  }
+
+  .main-contents-wrap {
+    @include flexColumn {
+    }
+    gap: 24px;
+
+    table {
+      margin: 30px 0;
+      border-top: 1px solid #333;
+      border-collapse: separate;
+      text-align: center;
+
+      th,
+      td {
+        font-size: 0.866em;
+        border-right: 1px solid #e8e8e8;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+
+      th {
+        padding: 0.6rem;
+        background-color: #f5f7fd;
+        border-bottom: 1px solid #d3d8dd;
+      }
+
+      td {
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
